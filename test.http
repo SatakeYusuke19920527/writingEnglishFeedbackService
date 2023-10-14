@@ -1,5 +1,0 @@
-POST https://writingenglishfeedbackservice-ai.openai.azure.com/openai/deployments/writingEnglishFeedbackService-ai/chat/completions?api-version=2023-03-15-preview
-Content-Type: application/json
-api-key: 5d99a4fb53954b82b5c9c0b17397fa59
-
-{"messages":[{"role": "user", "content": "Once Upon a Time..."}]}

@@ -133,3 +133,5 @@ dist
 node_modules
 lib
 .env
+# http
+test*
