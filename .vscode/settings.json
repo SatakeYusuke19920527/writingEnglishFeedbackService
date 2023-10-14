@@ -1,0 +1,5 @@
+{
+  "appService.zipIgnorePattern": ["node_modules{,/**}", ".vscode{,/**}"],
+  "appService.defaultWebAppToDeploy": "/subscriptions/9819147e-88ee-45cb-9c60-d3cd02e918e8/resourceGroups/writingEnglishFeedbackService-rg/providers/Microsoft.Web/sites/writingEnglishFeedbackService-webapp",
+  "appService.deploySubpath": "."
+}
