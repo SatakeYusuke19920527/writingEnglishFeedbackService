@@ -9,11 +9,27 @@ const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const OPENAI_COMPLETION_URL = `https://${OPENAI_RESOURCE}.openai.azure.com/openai/deployments/${OPENAI_DEPLOYMENT}/chat/completions?api-version=${OPENAI_API_VERSION}`;
 
 var getCompletion = async function (text) {
+  const content = `
+  #以下の #英作文 以下の誤字・脱字・文法の誤りを一覧で表示して修正をしてください。
+  #出力形式は #出力方式 を参考にしてください。
+
+  #英作文
+  ${text}
+
+  #出力方式
+  - 間違い箇所一覧
+  xxxxxx→yyyyyy
+  xxxxxx→yyyyyy
+  - 修正後の英作文
+  xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  `;
+
   var data = {
     messages: [
       {
         role: 'user',
-        content: text,
+        content: content,
       },
     ],
   };
